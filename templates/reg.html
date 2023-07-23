@@ -1,0 +1,18 @@
+<title>{% block title %}{% endblock %}</title> 
+<ul> 
+    {% set count =0 %}
+<table border="2">
+    <tr>
+        <th>Label</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+    </tr>
+{% for user in users %} 
+    <tr>
+        <td>{{ user[0] }}</td>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+    </tr>
+{% endfor %} 
+</table>
+</ul>

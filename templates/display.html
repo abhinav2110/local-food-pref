@@ -1,0 +1,114 @@
+<html lang="en">
+	<head>
+		<title>display</title>
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body bgcolor="#e6ffee">
+		<div class="one">
+			<div class="two">
+				<h1>Dash Board</h1>
+				<ul>
+					<li><a href="{{url_for('index')}}">Index</a></li>
+					<li class="active"><a href="{{url_for('display')}}">Display</a></li>
+					<li><a href="{{url_for('update')}}">Update</a></li>
+					<li><a href="{{url_for('logout')}}">Log out</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Welcome!! You are in Display Page!! </h2>						
+				</div> </br>
+				<div class="contentbar">
+					<h1>Your Details</h1> </br>
+					{% block content %}
+						<div class="border">
+							<table class="worddark"></br></br></br></br>
+								<tr>
+									<td>Username:</td>
+									<td>{{ account['username'] }}</td>
+								</tr>
+								<tr>
+									<td>Passworde:</td>
+									<td>{{ account['password'] }}</td>
+								</tr>
+								<tr>
+									<td>Energy:</td>
+									<td>{{ account['Energy'] }}</td>
+								</tr>
+								<tr>
+									<td>Total_lipid:</td>
+									<td>{{ account['Total_lipid'] }}</td>
+								</tr>
+								<tr>
+									<td>Fatty_acids	:</td>
+									<td>{{ account['Fatty_acids'] }}</td>
+								</tr>
+								<tr>
+									<td>Carbohydrate:</td>
+									<td>{{ account['Carbohydrate'] }}</td>
+								</tr>
+								<tr>
+									<td>Fiber:</td>
+									<td>{{ account['Fiber'] }}</td>
+								</tr>
+								<tr>
+									<td>Protein	:</td>
+									<td>{{ account['Protein'] }}</td>
+								</tr>
+								<tr>
+									<td>Sugars:</td>
+									<td>{{ account['Sugars'] }}</td>
+								</tr>	
+								<tr>
+									<td>Cholesterol:</td>
+									<td>{{ account['Cholesterol'] }}</td>
+								</tr>
+								<tr>
+									<td>Sodium:</td>
+									<td>{{ account['Sodium'] }}</td>
+								</tr>
+								<tr>
+									<td>Magnesium:</td>
+									<td>{{ account['Magnesium'] }}</td>
+								</tr>
+								<tr>
+									<td>Potassium:</td>
+									<td>{{ account['Potassium'] }}</td>
+								</tr>
+								<tr>
+									<td>Iron:</td>
+									<td>{{ account['Iron'] }}</td>
+								</tr>
+								<tr>
+									<td>Zinc:</td>
+									<td>{{ account['Zinc'] }}</td>
+								</tr>
+								<tr>
+									<td>Phosphorus:</td>
+									<td>{{ account['Phosphorus'] }}</td>
+								</tr>
+								<tr>
+									<td>Vitamin_A:</td>
+									<td>{{ account['Vitamin_A'] }}</td>
+								</tr>
+								<tr>
+									<td>Vitamin_C:</td>
+									<td>{{ account['Vitamin_C'] }}</td>
+								</tr>
+								<tr>
+									<td>Thiamin:</td>
+									<td>{{ account['Thiamin'] }}</td>
+								</tr>
+								<tr>
+									<td>Food Items:</td>
+									<td>{{ account['Folate'] }}</td>
+								</tr>				
+							</table>
+						</div>
+					{% endblock %}										
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

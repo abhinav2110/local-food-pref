@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> register </title>
+		<link rel="stylesheet" href="../static/style.css">	
+	</head>
+	<body >
+		<div class="registercontent" align="center">
+			<div class="registertop">
+				<h1>New Registration</h1>
+			</div></br></br></br></br>
+			<div class="registerbottom">
+			<form action="{{ url_for('register')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+			<input type="text" name="username" placeholder="Username" class="textbox" id="username" required></br></br>
+			<input type="password" name="password" placeholder="Password" class="textbox" id="password" required></br></br>
+			<input type="submit" class="btn" value="Register">
+			</form></br></br>
+			<p class="text">Already have account?<a class="worddark" href="{{ url_for('login')}}">Login here</a></p>
+			</div>
+		</div>
+	</body>
+</html>
